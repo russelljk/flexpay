@@ -1,0 +1,11 @@
+.tm_properties
+.hgignore
+.hgtags
+.hg/*
+build/*
+docs/build/*
+.Trashes
+Thumbs.db
+.DS_Store
+.DS_Store?
+*.pyc
