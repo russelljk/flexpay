@@ -1,6 +1,6 @@
-__all__ = ["Response"]
-
 import xml.sax
+
+__all__ = ["Response"]
 
 class Response(object):
     def __init__(self, name, parent):

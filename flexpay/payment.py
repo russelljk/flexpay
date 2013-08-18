@@ -1,7 +1,8 @@
 import hmac
 from hashlib import sha256, sha1
 from datetime import datetime
-import urllib, urllib2
+import urllib
+import urllib2
 from urlparse import urlparse
 import base64
 from flexpay.response import make_response
@@ -17,10 +18,11 @@ For Example:
 CC = PaymentMethod.reverse_lookup('CC')
 '''
 
-PaymentMethod = make_enum(str, 
-                          CC = 'CC',   # Credit Card
-                          ACH = 'ACH', # Bank Account Withdrawal
-                          ABT = 'ABT') # Amazon Payments Balance Transfer
+PaymentMethod = make_enum(
+                    str, 
+                    CC = 'CC',
+                    ACH = 'ACH',
+                    ABT = 'ABT')
 '''
 Payment method's available on Amazon Flexible Payment Services.
 
@@ -38,15 +40,16 @@ Payment method's available on Amazon Flexible Payment Services.
     
 '''
 
-CBUIStatus = make_enum(str,
-                       SA='SA',
-                       SB='SB',
-                       SC='SC',
-                       SE='SE',
-                       A='A',
-                       CE='CE',
-                       PE='PE',
-                       NP='NP')
+CBUIStatus = make_enum(
+                str,
+                SA='SA',
+                SB='SB',
+                SC='SC',
+                SE='SE',
+                A='A',
+                CE='CE',
+                PE='PE',
+                NP='NP')
 '''
 Status Codes Used By The Co-Branded User Interface Single Use Pipeline.
 
@@ -85,14 +88,15 @@ Status Codes Used By The Co-Branded User Interface Single Use Pipeline.
         Any number of additional problems.
 '''
 
-CBUIPipeline = make_enum(str,
-                         SingleUse='SingleUse',
-                         MultiUse='MultiUse',
-                         Recurring='Recurring',
-                         Recipient='Recipient',
-                         SetupPrepaid='SetupPrepaid',
-                         SetupPostpaid='SetupPostpaid',
-                         EditToken='EditToken')
+CBUIPipeline = make_enum(
+                str,
+                SingleUse='SingleUse',
+                MultiUse='MultiUse',
+                Recurring='Recurring',
+                Recipient='Recipient',
+                SetupPrepaid='SetupPrepaid',
+                SetupPostpaid='SetupPostpaid',
+                EditToken='EditToken')
 """
 The Pipeline to use in the Co-Branded User Interface.
 
@@ -122,9 +126,9 @@ The Pipeline to use in the Co-Branded User Interface.
             http://docs.aws.amazon.com/AmazonFPS/latest/FPSAdvancedGuide/RecipientToken.html
 """
 
-CurrencyCode = make_enum(str,
-                         USD='USD'
-) # United States Dollars
+CurrencyCode = make_enum(
+                str,
+                USD='USD')
 """
 The currency code to use for all transaction. Note that Currently USD is the only supported currency for Amazon FPS. \
 However Credit Cards might be a work around for international customers.
@@ -134,10 +138,10 @@ However Credit Cards might be a work around for international customers.
         United State Dollars
 """
 
-SandboxAPI = make_enum(str,
+SandboxAPI = make_enum(
+                str,
                 API_URL='https://fps.sandbox.amazonaws.com/', 
-                CBUI_URL='https://authorize.payments-sandbox.amazon.com/cobranded-ui/actions/start'
-)
+                CBUI_URL='https://authorize.payments-sandbox.amazon.com/cobranded-ui/actions/start')
 '''
 SandboxAPI
 URLS used by :py:class:`flexpay.payment.FlexPay` for the FPS sandbox environment.
@@ -193,7 +197,11 @@ class FlexPay:
     FlexPay class.
     """
     
-    def __init__(self, aws_public_key, aws_secret_key, api=SandboxAPI, currency_code=CurrencyCode.USD):
+    def __init__(self, 
+                 aws_public_key,
+                 aws_secret_key,
+                 api=SandboxAPI,
+                 currency_code=CurrencyCode.USD):
         '''
             :param aws_public_key: Your AWS public key.
             
@@ -430,7 +438,7 @@ class FlexPay:
                      amount,
                      reason_text = None,
                      pipeline = CBUIPipeline.SingleUse,
-                     paymentMethod = [ PaymentMethod.ABT, PaymentMethod.ACH, PaymentMethod.CC ]):
+                     paymentMethod = [PaymentMethod.ABT, PaymentMethod.ACH, PaymentMethod.CC]):
         
         """
         Generates a url for the Co-Branded User Interface pipeline.
