@@ -211,8 +211,8 @@ class FlexPay:
             
             :param currency_code: The currency to use for transactions. Must be an instance of :py:class:`flexpay.payment.CurrencyCode`.
         '''
-        self.pub_key = pub_key
-        self.secret_key = secret_key
+        self.pub_key = aws_public_key
+        self.secret_key = aws_secret_key
         self.currency_code = currency_code
         self.api = api
     
