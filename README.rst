@@ -3,6 +3,11 @@ FlexPay 0.1
 
 Copyright 2013 Russell Kyle russell.j.kyle@gmail.com
 
+Note
+====
+
+FlexPay is still in early development. You are welcome to use it but do so at your own risk.
+
 Overview
 ========
 
@@ -63,6 +68,7 @@ When a user checkouts you'll want to generate a cobranded-ui url and redirect to
         return_url
     )
     
+    # Use whatever method your CMS/Framework provides for url redirection.
     redirect(cbui_url)
 
 Later on when the user returns to the site after completing checkout you use ``FlexPay.pay`` to charge the user immediately. 
