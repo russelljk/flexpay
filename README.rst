@@ -21,17 +21,19 @@ FlexPay is release under the zlib License and can be used for commercial, educat
 Links
 -----
 
-* FlexPay GitHub Repository - `<https://github.com/russelljk/flexpay/>`_
-* FlexPay - `<http://russellkyle.com/code/flexpay/](http://russellkyle.com/code/flexpay/>`_
-* Amazon Flexible Payments Service - `<http://aws.amazon.com/fps/>`_
-* FPS API Documentation - `<http://aws.amazon.com/fps/](http://aws.amazon.com/fps/>`_
-* FPS Quick Start Guide - `<http://aws.amazon.com/fps/](http://aws.amazon.com/fps/>`_
+* **FlexPay GitHub Repository** - `<https://github.com/russelljk/flexpay/>`_
+* **FlexPay** - *Coming Soon*...
+* **Amazon Flexible Payments Service** - `<http://aws.amazon.com/fps/>`_
+* **FPS Quick Start Guide** - `<http://docs.aws.amazon.com/AmazonFPS/latest/FPSBasicGuide/intro.html>`_
 
 Quick Start
 ===========
 
 Installation
 ------------
+
+Currently **FlexPay** is not listed on **pip** so you can install directly from **GitHub** or download
+and run ``setup.py`` yourself.
 
 Install via **pip**::
 
