@@ -6,7 +6,7 @@ Copyright 2013 Russell Kyle russell.j.kyle@gmail.com
 Note
 ====
 
-FlexPay is still in early development. You are welcome to use it but do so at your own risk.
+FlexPay is still in early development.
 
 Overview
 ========
