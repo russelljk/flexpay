@@ -8,7 +8,7 @@ setup(name='flexpay',
       author='Russell Kyle',
       author_email='russell.j.kyle@gmail.com',
       url='http://russellkyle.com/flexpay/',
-      download_url='https://github.com/russelljk/flexpay/tarball/0.1',
+      download_url='https://github.com/russelljk/flexpay/archive/master.tar.gz',
       packages=['flexpay'],
       keywords=['Amazon FPS', 'payments', 'e-commerc']
 )
