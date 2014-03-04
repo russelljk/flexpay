@@ -11,5 +11,6 @@ setup(name='flexpay',
       download_url='https://github.com/russelljk/flexpay/archive/master.tar.gz',
       packages=['flexpay'],
       include_package_data=True,
+      zip_safe = False,
       keywords=['Amazon FPS', 'payments', 'e-commerc']
 )
